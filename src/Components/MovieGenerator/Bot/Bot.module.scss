@@ -1,0 +1,50 @@
+.bot-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1.5rem 0.5rem;
+  min-height: 384px;
+
+  img {
+    width: 40%;
+  }
+
+  &__speech-bubble {
+    width: 55%;
+    min-height: 124px;
+    border-radius: 15px;
+    position: relative;
+    margin-bottom: 4rem;
+    border: 3px solid #777;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+
+    &::before {
+      content: "";
+      position: absolute;
+      border-left: 9px solid transparent;
+      border-right: 9px solid #777;
+      border-top: 9px solid #777;
+      border-bottom: 9px solid transparent;
+      left: -21px;
+      top: 64px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      border-left: 7px solid transparent;
+      border-right: 7px solid #ffffff;
+      border-top: 7px solid #ffffff;
+      border-bottom: 7px solid transparent;
+      left: -11px;
+      top: 68px;
+    }
+
+    p {
+      padding: 0 1.3em;
+      color: #242526;
+    }
+  }
+}

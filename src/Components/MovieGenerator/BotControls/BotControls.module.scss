@@ -1,0 +1,47 @@
+.bot-controls {
+  display: flex;
+  justify-content: space-around;
+  padding: 1.5rem 0.5rem;
+  min-height: 74px;
+
+  img {
+    width: 100%;
+    align-self: center;
+  }
+
+  textarea {
+    background-color: #e8e8e8;
+    padding: 0.8rem;
+    border: none;
+    border-top-right-radius: 0;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 15px;
+    width: 100%;
+    resize: none;
+    min-height: 40px;
+  }
+
+  textarea::placeholder {
+    color: #777;
+    opacity: 0.8;
+  }
+
+  button {
+    border: none;
+    background: #ff176b;
+    cursor: pointer;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    min-width: 50px;
+
+    &:hover {
+      background-color: #242526;
+      svg {
+        path {
+          fill: whitesmoke;
+        }
+      }
+    }
+  }
+}
