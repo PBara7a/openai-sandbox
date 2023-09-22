@@ -1,4 +1,12 @@
+import { ChatCompletionMessage } from "openai/resources/chat";
+
 export interface OpenAICompletionPrompt {
+  messages: ChatCompletionMessage[];
+  temperature?: number;
+  max_tokens?: number;
+}
+
+export interface MovieCompletionPrompt {
   prompt: string;
   temperature?: number;
   max_tokens?: number;

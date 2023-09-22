@@ -1,0 +1,38 @@
+.header {
+  display: grid;
+  justify-content: space-between;
+  grid-template-areas:
+    "logo . ."
+    "logo title supportId"
+    "logo subtitle clear-btn";
+
+  & > * {
+    margin: 0.11em;
+  }
+
+  &__logo {
+    grid-area: logo;
+    width: 60px;
+  }
+
+  &__support-id {
+    font-size: 10px;
+    grid-area: supportId;
+    text-align: center;
+  }
+
+  &__clear-btn {
+    grid-area: clear-btn;
+    height: 20px;
+    color: #586e88;
+    background-color: transparent;
+    border: 1px solid #586e88;
+    border-radius: 15px;
+    cursor: pointer;
+
+    &:hover {
+      border: 1px solid #ff823b;
+      color: #ff823b;
+    }
+  }
+}

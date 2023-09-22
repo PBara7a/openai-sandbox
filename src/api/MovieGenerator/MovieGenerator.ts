@@ -1,18 +1,11 @@
-import OpenAI from "openai";
-import { OpenAICompletionPrompt, OpenAIImagePrompt } from "../../models/OpenAI";
+import { openai } from "../utils/OpenAi";
+import { MovieCompletionPrompt, OpenAIImagePrompt } from "../../models/OpenAI";
 
-const API_KEY = process.env.REACT_APP_OPENAI_API_KEY;
-
-const openai = new OpenAI({
-  apiKey: API_KEY,
-  dangerouslyAllowBrowser: true,
-});
-
-const fetchCompletionFromOpenAI = async ({
+const fetchMovieCompletion = async ({
   prompt,
   temperature,
   max_tokens,
-}: OpenAICompletionPrompt) => {
+}: MovieCompletionPrompt) => {
   try {
     const completion = await openai.chat.completions.create({
       model: "gpt-3.5-turbo",
@@ -73,17 +66,17 @@ export const getBotFirstImpression = async (idea: string) => {
   outline: ${idea}
   message: 
   `;
-  return fetchCompletionFromOpenAI({ prompt, max_tokens: 60 });
+  return fetchMovieCompletion({ prompt, max_tokens: 60 });
 };
 
 export const getSynopsis = async (idea: string) => {
   const prompt = `Generate an engaging, professional and marketable movie synopsis based on the following idea: ${idea}. Just give the synopsis without a title. The synopsis should include actors names in parentheses after each character. Choose actors that would be ideal for this role.`;
-  return fetchCompletionFromOpenAI({ prompt });
+  return fetchMovieCompletion({ prompt });
 };
 
 export const getTitle = async (synopsis: string) => {
   const prompt = `Generate a short and catchy title for this synopsis: ${synopsis}`;
-  return fetchCompletionFromOpenAI({
+  return fetchMovieCompletion({
     prompt,
     temperature: 0.7,
     max_tokens: 25,
@@ -99,7 +92,7 @@ export const getFeaturingActors = async (synopsis: string) => {
   synopsis: ${synopsis}
   names:   
   `;
-  return fetchCompletionFromOpenAI({ prompt });
+  return fetchMovieCompletion({ prompt });
 };
 
 export const getImagePrompt = async (title: string, synopsis: string) => {
@@ -117,7 +110,7 @@ export const getImagePrompt = async (title: string, synopsis: string) => {
   synopsis: ${synopsis}
   image description: 
   `;
-  return fetchCompletionFromOpenAI({
+  return fetchMovieCompletion({
     prompt,
     temperature: 0.8,
     max_tokens: 100,
