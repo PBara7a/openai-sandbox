@@ -1,8 +1,8 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import { MovieBot } from "./Components/MovieGenerator/MovieBot";
-import { Home } from "./Components/Home/Home";
-import { ChatBot } from "./Components/ChatBot/ChatBot";
+import { Home } from "./Pages/Home";
+import { ChatBot } from "./Components/ChatBot";
 
 function App() {
   return (

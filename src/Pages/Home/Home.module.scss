@@ -1,6 +1,5 @@
 .home {
   text-align: center;
-  margin: 5%;
 
   h1 {
     margin-bottom: 2rem;
@@ -14,8 +13,7 @@
   &__item {
     padding: 1rem;
     border-radius: 15px;
-    border: solid 1px #242526;
-    margin: 0 10%;
+    border: solid 2px #242526;
     background-color: whitesmoke;
     cursor: pointer;
     min-width: 640px;
@@ -25,8 +23,7 @@
     text-decoration: none;
 
     &:hover {
-      border: solid 2px #242526;
-      box-shadow: none;
+      background-color: #d0cece;
     }
   }
 }

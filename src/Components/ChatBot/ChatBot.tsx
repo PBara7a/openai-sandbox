@@ -1,7 +1,7 @@
 import React, { FormEvent, useEffect, useState } from "react";
 import cx from "classnames";
 import { ReactComponent as SendIcon } from "../../assets/icons/Send.svg";
-import { Header } from "./Header/Header";
+import { Header } from "../Header/Header";
 import { botInstructions } from "../../utils/ChatBot";
 import { ChatCompletionMessage } from "openai/resources/chat";
 import { onValue, off } from "firebase/database";
@@ -40,7 +40,11 @@ export const ChatBot = () => {
   return (
     <main>
       <section className={styles["chatbot"]}>
-        <Header />
+        <Header
+          logo="images/brain.png"
+          title="WeeAssistant"
+          subtitle="Ask away love!"
+        />
         <div className={styles["chatbot__conversation-container"]}>
           <div
             className={cx(
