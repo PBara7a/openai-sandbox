@@ -1,0 +1,38 @@
+.input-container {
+  display: flex;
+
+  input[type="text"],
+  &__submit-btn {
+    background-color: transparent;
+    border: 1px solid #586e88;
+    border-radius: 15px;
+    padding: 1em;
+  }
+
+  input[type="text"] {
+    color: #fcfcfc;
+    width: 100%;
+    border-right: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  &__submit-btn {
+    border-left: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    cursor: pointer;
+
+    svg {
+      path {
+        fill: #77aef1;
+      }
+    }
+
+    &:hover {
+      path {
+        fill: #ff823b;
+      }
+    }
+  }
+}

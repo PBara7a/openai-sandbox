@@ -7,8 +7,12 @@ const ideas = [
     path: "/movie-generator",
   },
   {
-    name: "Chat bot",
+    name: "Chat bot (Generic)",
     path: "/chatbot",
+  },
+  {
+    name: "Chat bot (Specific)",
+    path: "/chatbot-v2",
   },
 ];
 

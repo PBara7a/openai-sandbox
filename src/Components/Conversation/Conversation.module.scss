@@ -1,0 +1,36 @@
+.conversation {
+  max-height: 448px;
+  min-height: 448px;
+  overflow-y: scroll;
+  margin: 1em 0;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &::-moz-scrollbar {
+    display: none;
+  }
+
+  &__speech {
+    padding: 1em;
+    margin: 1em auto;
+    color: #fcfcfc;
+    border-radius: 15px;
+    line-height: 1.3rem;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &--ai {
+      background: #253b4b;
+      border-top-left-radius: 0;
+    }
+
+    &--human {
+      background: #24976f;
+      border-top-right-radius: 0;
+    }
+  }
+}

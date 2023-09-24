@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { getBotFirstImpression, getMovieIdea } from "../../api/MovieGenerator";
 import { MovieIdea } from "../../models/Movie";
-import { Bot } from "./Bot/Bot";
-import { BotControls } from "./BotControls/BotControls";
-import { Output } from "./Output/Output";
+import { Bot } from "../../components/MovieGenerator/Bot/Bot";
+import { BotControls } from "../../components/MovieGenerator/BotControls/BotControls";
+import { Output } from "../../components/MovieGenerator/Output/Output";
 import {
   defaultBotChat,
   defaultBotThinking,
